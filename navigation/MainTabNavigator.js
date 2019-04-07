@@ -3,58 +3,54 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import AllResultsScreen from '../screens/AllResultsScreen';
+import ProduceScreen from '../screens/ProduceScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+const ProduceStack = createStackNavigator({
+  Produce: ProduceScreen,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+ProduceStack.navigationOptions = {
+  tabBarLabel: 'Produce',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'ios-list'}
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const NotificationsStack = createStackNavigator({
+  Notifications: NotificationsScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+NotificationsStack.navigationOptions = {
+  tabBarLabel: 'Notifications',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={'ios-alert'}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const AllResultsStack = createStackNavigator({
+  AllResults: AllResultsScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+AllResultsStack.navigationOptions = {
+  tabBarLabel: 'All Results',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={'ios-trending-up'}
     />
   ),
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
+  ProduceStack,
+  NotificationsStack,
+  AllResultsStack,
 });
