@@ -30,7 +30,7 @@ NotificationsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={'ios-alert'}
     />
   ),
 };
@@ -44,7 +44,7 @@ AllResultsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={'ios-trending-up'}
     />
   ),
 };
