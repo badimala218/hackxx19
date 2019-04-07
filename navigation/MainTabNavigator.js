@@ -3,14 +3,9 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-<<<<<<< HEAD
 import AllResultsScreen from '../screens/AllResultsScreen';
-=======
-import SettingsScreen from '../screens/SettingsScreen';
 import ProduceScreen from '../screens/ProduceScreen';
->>>>>>> be75296c4c394ffc75c23f3aac5b39c644d9f4ad
+import NotificationsScreen from '../screens/NotificationsScreen';
 
 const ProduceStack = createStackNavigator({
   Produce: ProduceScreen,
@@ -26,11 +21,11 @@ ProduceStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const NotificationsStack = createStackNavigator({
+  Notifications: NotificationsScreen,
 });
 
-LinksStack.navigationOptions = {
+NotificationsStack.navigationOptions = {
   tabBarLabel: 'Notifications',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -40,17 +35,11 @@ LinksStack.navigationOptions = {
   ),
 };
 
-<<<<<<< HEAD
 const AllResultsStack = createStackNavigator({
   AllResults: AllResultsScreen,
-=======
-
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
->>>>>>> be75296c4c394ffc75c23f3aac5b39c644d9f4ad
 });
 
-SettingsStack.navigationOptions = {
+AllResultsStack.navigationOptions = {
   tabBarLabel: 'All Results',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -62,6 +51,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   ProduceStack,
-  LinksStack,
+  NotificationsStack,
   AllResultsStack,
 });
