@@ -12,7 +12,11 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
+<<<<<<< HEAD
   tabBarLabel: 'Results',
+=======
+  tabBarLabel: 'Produce',
+>>>>>>> b259de2fa29571d896ad1c3c3ea2c8f3479190be
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -30,7 +34,11 @@ const LinksStack = createStackNavigator({
 });
 
 LinksStack.navigationOptions = {
+<<<<<<< HEAD
   tabBarLabel: 'Notification',
+=======
+  tabBarLabel: 'Notifications',
+>>>>>>> b259de2fa29571d896ad1c3c3ea2c8f3479190be
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
