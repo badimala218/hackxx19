@@ -6,25 +6,18 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ProduceScreen from '../screens/ProduceScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+const ProduceStack = createStackNavigator({
+  Produce: ProduceScreen,
 });
 
-HomeStack.navigationOptions = {
-<<<<<<< HEAD
-  tabBarLabel: 'Results',
-=======
+ProduceStack.navigationOptions = {
   tabBarLabel: 'Produce',
->>>>>>> b259de2fa29571d896ad1c3c3ea2c8f3479190be
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'ios-list'}
     />
   ),
 };
@@ -34,11 +27,7 @@ const LinksStack = createStackNavigator({
 });
 
 LinksStack.navigationOptions = {
-<<<<<<< HEAD
-  tabBarLabel: 'Notification',
-=======
   tabBarLabel: 'Notifications',
->>>>>>> b259de2fa29571d896ad1c3c3ea2c8f3479190be
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -46,6 +35,7 @@ LinksStack.navigationOptions = {
     />
   ),
 };
+
 
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
@@ -62,7 +52,7 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
+  ProduceStack,
   LinksStack,
   SettingsStack,
 });
